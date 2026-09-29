@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  ci:
+    uses: inzumer/inzumer-ci/.github/workflows/node-ci.yml@v1
+    with:
+      audit-level: high
+      commands: |
+        pnpm check
+        pnpm test:coverage
+        npm pack --dry-run
+      coverage-summary: coverage/coverage-summary.json
+
+  duplication:
+    uses: inzumer/inzumer-ci/.github/workflows/duplication.yml@v1
+    with:
+      paths: src
+      ignore: '**/__tests__/**'
