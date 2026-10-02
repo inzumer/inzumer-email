@@ -49,7 +49,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "changeset": "changeset",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "gallery": "pnpm build && node scripts/gallery.mjs"
   },
   "dependencies": {
     "@inzumer/tokens": "^1.1.1",

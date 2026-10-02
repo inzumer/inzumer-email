@@ -3,3 +3,6 @@ dist/
 coverage/
 *.log
 .DS_Store
+
+# Static email gallery (GitHub Pages)
+gallery/
