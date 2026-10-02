@@ -3,3 +3,6 @@ dist/
 coverage/
 *.log
 .DS_Store
+
+# Storybook build (GitHub Pages)
+storybook-static/

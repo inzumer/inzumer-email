@@ -51,9 +51,18 @@ const { html, text } = await renderEmail(
 | `EmailFooter`                           | Why they get the email, links and the unsubscribe                                    |
 | `createEmailTheme`, `defaultEmailTheme` | Colors, fonts and radius; the defaults come from `@inzumer/tokens`                   |
 | `renderEmail`                           | HTML (inline styles) and its plain-text version                                      |
+| `MessageTemplate`                       | Ready-made message: title, paragraphs, highlight, action, note, signature            |
+| `ActionTemplate`                        | One action by link (confirm, reset): button, copyable link and expiry                |
+| `EmailPreview`                          | An email in a frame, rendered as sent (for Storybook)                                |
 
 Email clients don't read CSS variables, classes or modern layout, so the theme holds concrete
 values and every style is inline. Images need absolute URLs.
+
+## Storybook
+
+`pnpm storybook` shows every component and template rendered as sent, in Spanish and English. The
+Pages workflow publishes it on every push to `main`: <https://inzumer.github.io/inzumer-email/>.
+Packages with their own emails show them the same way with `EmailPreview`.
 
 ## Development
 

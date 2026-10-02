@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@inzumer/email · plantillas</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #f6f3ef;
+        color: #2f201b;
+      }
+      header {
+        padding: 24px 16px;
+        border-bottom: 1px solid #e5ddd4;
+        background: #fff;
+      }
+      h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      main {
+        padding: 16px;
+        display: grid;
+        gap: 32px;
+      }
+      section {
+        background: #fff;
+        border: 1px solid #e5ddd4;
+        border-radius: 12px;
+        padding: 16px;
+      }
+      h2 {
+        margin: 0 0 4px;
+        font-size: 20px;
+      }
+      h3 {
+        margin: 16px 0 4px;
+        font-size: 16px;
+      }
+      p {
+        margin: 0 0 8px;
+        color: #6b5a52;
+      }
+      .frames {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+      }
+      figure {
+        margin: 0;
+      }
+      figcaption {
+        font-size: 13px;
+        color: #6b5a52;
+        margin-bottom: 4px;
+      }
+      iframe {
+        border: 1px solid #e5ddd4;
+        border-radius: 8px;
+        height: 640px;
+        background: #fff;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      nav a {
+        color: #2f201b;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>@inzumer/email · plantillas</h1>
+      <nav>
+        <a href="#welcome">Bienvenida (MessageTemplate)</a
+        ><a href="#notice">Aviso (MessageTemplate sin acción)</a
+        ><a href="#action">Acción por enlace (ActionTemplate)</a>
+      </nav>
+    </header>
+    <main>
+      <section id="welcome">
+        <h2>Bienvenida (MessageTemplate)</h2>
+        <h3>es · Tu cuenta está lista</h3>
+        <div class="frames">
+          <figure>
+            <figcaption>Desktop</figcaption>
+            <iframe
+              src="emails/welcome-es.html"
+              width="640"
+              title="Bienvenida (MessageTemplate) es desktop"
+            ></iframe>
+          </figure>
+          <figure>
+            <figcaption>Móvil</figcaption>
+            <iframe
+              src="emails/welcome-es.html"
+              width="375"
+              title="Bienvenida (MessageTemplate) es mobile"
+            ></iframe>
+          </figure>
+        </div>
+        <nav>
+          <a href="emails/welcome-es.html">HTML</a><a href="emails/welcome-es.txt">Texto plano</a>
+        </nav>
+        <h3>en · Your account is ready</h3>
+        <div class="frames">
+          <figure>
+            <figcaption>Desktop</figcaption>
+            <iframe
+              src="emails/welcome-en.html"
+              width="640"
+              title="Bienvenida (MessageTemplate) en desktop"
+            ></iframe>
+          </figure>
+          <figure>
+            <figcaption>Móvil</figcaption>
+            <iframe
+              src="emails/welcome-en.html"
+              width="375"
+              title="Bienvenida (MessageTemplate) en mobile"
+            ></iframe>
+          </figure>
+        </div>
+        <nav>
+          <a href="emails/welcome-en.html">HTML</a><a href="emails/welcome-en.txt">Texto plano</a>
+        </nav>
+      </section>
+      <section id="notice">
+        <h2>Aviso (MessageTemplate sin acción)</h2>
+        <h3>es · Borramos tu cuenta</h3>
+        <div class="frames">
+          <figure>
+            <figcaption>Desktop</figcaption>
+            <iframe
+              src="emails/notice-es.html"
+              width="640"
+              title="Aviso (MessageTemplate sin acción) es desktop"
+            ></iframe>
+          </figure>
+          <figure>
+            <figcaption>Móvil</figcaption>
+            <iframe
+              src="emails/notice-es.html"
+              width="375"
+              title="Aviso (MessageTemplate sin acción) es mobile"
+            ></iframe>
+          </figure>
+        </div>
+        <nav>
+          <a href="emails/notice-es.html">HTML</a><a href="emails/notice-es.txt">Texto plano</a>
+        </nav>
+        <h3>en · We deleted your account</h3>
+        <div class="frames">
+          <figure>
+            <figcaption>Desktop</figcaption>
+            <iframe
+              src="emails/notice-en.html"
+              width="640"
+              title="Aviso (MessageTemplate sin acción) en desktop"
+            ></iframe>
+          </figure>
+          <figure>
+            <figcaption>Móvil</figcaption>
+            <iframe
+              src="emails/notice-en.html"
+              width="375"
+              title="Aviso (MessageTemplate sin acción) en mobile"
+            ></iframe>
+          </figure>
+        </div>
+        <nav>
+          <a href="emails/notice-en.html">HTML</a><a href="emails/notice-en.txt">Texto plano</a>
+        </nav>
+      </section>
+      <section id="action">
+        <h2>Acción por enlace (ActionTemplate)</h2>
+        <h3>es · Confirmá tu email</h3>
+        <div class="frames">
+          <figure>
+            <figcaption>Desktop</figcaption>
+            <iframe
+              src="emails/action-es.html"
+              width="640"
+              title="Acción por enlace (ActionTemplate) es desktop"
+            ></iframe>
+          </figure>
+          <figure>
+            <figcaption>Móvil</figcaption>
+            <iframe
+              src="emails/action-es.html"
+              width="375"
+              title="Acción por enlace (ActionTemplate) es mobile"
+            ></iframe>
+          </figure>
+        </div>
+        <nav>
+          <a href="emails/action-es.html">HTML</a><a href="emails/action-es.txt">Texto plano</a>
+        </nav>
+        <h3>en · Confirm your email</h3>
+        <div class="frames">
+          <figure>
+            <figcaption>Desktop</figcaption>
+            <iframe
+              src="emails/action-en.html"
+              width="640"
+              title="Acción por enlace (ActionTemplate) en desktop"
+            ></iframe>
+          </figure>
+          <figure>
+            <figcaption>Móvil</figcaption>
+            <iframe
+              src="emails/action-en.html"
+              width="375"
+              title="Acción por enlace (ActionTemplate) en mobile"
+            ></iframe>
+          </figure>
+        </div>
+        <nav>
+          <a href="emails/action-en.html">HTML</a><a href="emails/action-en.txt">Texto plano</a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>

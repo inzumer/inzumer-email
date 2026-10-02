@@ -1,0 +1,14 @@
+Inzumer
+
+
+CONFIRM YOUR EMAIL
+
+Tap the button to confirm this email is yours.
+
+Confirm email https://example.com/confirm?token=123
+
+If the button does not work, paste this link in your browser: https://example.com/confirm?token=123
+
+The link expires in 30 minutes.
+
+You get this because someone signed up with this email.
