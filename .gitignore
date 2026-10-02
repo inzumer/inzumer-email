@@ -5,4 +5,4 @@ coverage/
 .DS_Store
 
 # Static email gallery (GitHub Pages)
-gallery/
+/gallery/
