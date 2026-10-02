@@ -10,6 +10,7 @@ export interface EmailButtonProps {
 /** Call to action: a link styled as a button in the primary color. */
 export const EmailButton = ({ href, children }: EmailButtonProps) => {
   const theme = useEmailTheme();
+
   return (
     <Button
       href={href}

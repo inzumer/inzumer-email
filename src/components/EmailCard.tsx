@@ -9,6 +9,7 @@ export interface EmailCardProps {
 /** A highlighted block inside the email (a summary, a list of links). */
 export const EmailCard = ({ children }: EmailCardProps) => {
   const theme = useEmailTheme();
+
   return (
     <Section
       style={{

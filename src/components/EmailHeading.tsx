@@ -10,6 +10,7 @@ export interface EmailHeadingProps {
 /** Email title (h1) or section title (h2). */
 export const EmailHeading = ({ level = 1, children }: EmailHeadingProps) => {
   const theme = useEmailTheme();
+
   return (
     <Heading
       as={level === 1 ? 'h1' : 'h2'}

@@ -25,6 +25,7 @@ export const EmailFooter = ({ reason, links = [], unsubscribe }: EmailFooterProp
     color: theme.colors.textSecondary,
   };
   const all = unsubscribe ? [...links, unsubscribe] : links;
+
   return (
     <Section style={{ padding: '16px 8px', textAlign: 'center' }}>
       <Text style={small}>{reason}</Text>
