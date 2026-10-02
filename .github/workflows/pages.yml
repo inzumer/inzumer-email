@@ -1,6 +1,6 @@
 name: Pages
 
-# Publishes the gallery of sample templates (pnpm gallery) to GitHub Pages.
+# Publishes Storybook (components and templates rendered as sent) to GitHub Pages.
 on:
   push:
     branches: [main]
@@ -29,9 +29,9 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm gallery
+      - run: pnpm build-storybook
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: gallery
+          path: storybook-static
       - id: deployment
         uses: actions/deploy-pages@v4

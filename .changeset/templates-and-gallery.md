@@ -2,4 +2,4 @@
 '@inzumer/email': minor
 ---
 
-`MessageTemplate` and `ActionTemplate` (ready-made emails from props) and `buildGallery`, which turns rendered emails into a static gallery (desktop and mobile frames, HTML and text). The sample templates are published to GitHub Pages.
+`MessageTemplate` and `ActionTemplate` (ready-made emails from props) and `EmailPreview` (an email rendered as sent, in a frame, for Storybook). Storybook with every component and template is published to GitHub Pages.

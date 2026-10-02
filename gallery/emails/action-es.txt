@@ -1,0 +1,14 @@
+Inzumer
+
+
+CONFIRMÁ TU EMAIL
+
+Tocá el botón para confirmar que este email es tuyo.
+
+Confirmar email https://example.com/confirm?token=123
+
+Si el botón no funciona, pegá este enlace en el navegador: https://example.com/confirm?token=123
+
+El enlace vence en 30 minutos.
+
+Te llega porque alguien usó este email para registrarse.
