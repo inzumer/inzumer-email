@@ -11,6 +11,7 @@ export interface EmailTextProps {
 /** A paragraph of the email. */
 export const EmailText = ({ variant = 'body', children }: EmailTextProps) => {
   const theme = useEmailTheme();
+
   return (
     <Text
       style={{
