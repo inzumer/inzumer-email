@@ -1,12 +1,11 @@
 import { baseColors, baseTypography } from '@inzumer/tokens';
 
+/** Email background: always white (no per-theme background). */
+export const EMAIL_BACKGROUND = '#ffffff';
+
 /** Concrete values for email clients, which don't read CSS variables. */
 export interface EmailTheme {
   colors: {
-    /** Behind the card. */
-    background: string;
-    /** The card. */
-    surface: string;
     text: string;
     textSecondary: string;
     border: string;
@@ -25,8 +24,6 @@ const rgb = (channels: string) => `rgb(${channels.split(' ').join(', ')})`;
 
 export const defaultEmailTheme: EmailTheme = {
   colors: {
-    background: rgb(baseColors.neutral[100]),
-    surface: '#ffffff',
     text: rgb(baseColors.neutral[900]),
     textSecondary: rgb(baseColors.neutral[600]),
     border: rgb(baseColors.neutral[200]),
