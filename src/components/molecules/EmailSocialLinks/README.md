@@ -1,7 +1,8 @@
 # EmailSocialLinks
 
 A centered row of network icons, each linking to the profile. Icons are PNG (email clients don't show
-SVG): the default gray ones are published with this package's Storybook, or pass a brand's own with
+SVG): the default gray ones (the same family as the `@inzumer/ui-library` icons) are published with this
+package's Storybook, or pass a brand's own with
 `iconUrl`. The network name is the `alt`, so it reads well with images blocked.
 
 ## Usage
