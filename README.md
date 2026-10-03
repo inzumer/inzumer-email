@@ -41,22 +41,38 @@ const { html, text } = await renderEmail(
 );
 ```
 
-| Export                                  | What it is                                                                           |
-| --------------------------------------- | ------------------------------------------------------------------------------------ |
-| `EmailLayout`                           | Page: brand header (logo or name), centered card, footer; `lang` and inbox `preview` |
-| `EmailHeading`                          | Title (`level` 1) or section title (2)                                               |
-| `EmailText`                             | Paragraph: `body`, `secondary` or `small`                                            |
-| `EmailButton`                           | Call to action in the primary color                                                  |
-| `EmailCard`                             | Highlighted block inside the card                                                    |
-| `EmailFooter`                           | Why they get the email, links and the unsubscribe                                    |
-| `createEmailTheme`, `defaultEmailTheme` | Colors, fonts and radius; the defaults come from `@inzumer/tokens`                   |
-| `renderEmail`                           | HTML (inline styles) and its plain-text version                                      |
-| `MessageTemplate`                       | Ready-made message: title, paragraphs, highlight, action, note, signature            |
-| `ActionTemplate`                        | One action by link (confirm, reset): button, copyable link and expiry                |
-| `EmailPreview`                          | An email in a frame, rendered as sent (for Storybook)                                |
+| Export                                  | What it is                                                                                    |
+| --------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `EmailLayout`                           | Page on white: brand header (logo or name), centered card, footer; `lang` and inbox `preview` |
+| `EmailHeading`                          | Title (`level` 1) or section title (2)                                                        |
+| `EmailText`                             | Paragraph: `body`, `secondary` or `small`                                                     |
+| `EmailButton`                           | Call to action in the primary color                                                           |
+| `EmailBanner`                           | Full-width image, optionally linked                                                           |
+| `EmailCard`                             | Highlighted block: themed border and soft shadow, no fill                                     |
+| `EmailFooter`                           | Set apart by a divider: why they get the email, links and the unsubscribe                     |
+| `createEmailTheme`, `defaultEmailTheme` | Text, border, link and primary colors, fonts and radius (from `@inzumer/tokens`)              |
+| `renderEmail`                           | HTML (inline styles) and its plain-text version                                               |
+| `MessageTemplate`                       | Ready-made message: title, paragraphs, highlight, action, note, signature                     |
+| `ActionTemplate`                        | One action by link (confirm, reset): button, copyable link and expiry                         |
+| `EmailPreview`                          | An email in a frame, rendered as sent (for Storybook)                                         |
 
 Email clients don't read CSS variables, classes or modern layout, so the theme holds concrete
 values and every style is inline. Images need absolute URLs.
+
+## Structure
+
+Atomic design, one folder per component with its barrel, test, story and README:
+
+```
+src/components/
+  atoms/       EmailBanner, EmailButton, EmailHeading, EmailText
+  molecules/   EmailCard, EmailFooter
+  organisms/   EmailLayout
+  templates/   ActionTemplate, MessageTemplate
+src/preview/   EmailPreview (exported), EmailFrame (stories only)
+src/render/    renderEmail
+src/theme/     createEmailTheme, defaultEmailTheme
+```
 
 ## Storybook
 
