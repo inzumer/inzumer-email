@@ -1,6 +1,6 @@
 {
   "name": "@inzumer/email",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Email components (React Email) themed with the Inzumer design tokens",
   "license": "MIT",
   "author": "Nahuel Zamuner <inzumer@gmail.com>",
