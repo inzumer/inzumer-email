@@ -24,5 +24,6 @@ import { createEmailTheme, EmailFooter, EmailLayout, EmailText } from '@inzumer/
 - `preview` — text the inbox shows next to the subject
 - `brand` — `name` and an optional `logoUrl` (absolute)
 - `theme` — from `createEmailTheme`; the default one otherwise
+- `hero` — an `EmailHero` on top, instead of the simple brand header
 - `footer` — usually an `EmailFooter`
 - `children` — the content of the card
