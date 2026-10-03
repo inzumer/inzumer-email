@@ -16,6 +16,17 @@ describe('EmailLayout', () => {
     expect(html).toContain('>Milimon<');
   });
 
+  it('should put the hero instead of the brand header', async () => {
+    const { html } = await renderEmail(
+      <EmailLayout lang="es" preview="Hola" brand={{ name: 'Milimon' }} hero={<p>Portada</p>}>
+        Hola
+      </EmailLayout>,
+    );
+
+    expect(html).toContain('Portada');
+    expect(html).not.toContain('>Milimon<');
+  });
+
   it('should show the logo when there is one, with the theme colors', async () => {
     const { html } = await renderEmail(
       <EmailLayout

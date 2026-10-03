@@ -9,6 +9,8 @@ export interface EmailLayoutProps {
   preview: string;
   brand: { name: string; logoUrl?: string };
   theme?: EmailTheme;
+  /** An `EmailHero` on top; it replaces the simple brand header. */
+  hero?: ReactNode;
   footer?: ReactNode;
   children: ReactNode;
 }
@@ -19,6 +21,7 @@ export const EmailLayout = ({
   preview,
   brand,
   theme = defaultEmailTheme,
+  hero,
   footer,
   children,
 }: EmailLayoutProps) => (
@@ -36,28 +39,30 @@ export const EmailLayout = ({
         }}
       >
         <Container style={{ maxWidth: '560px', margin: '0 auto' }}>
-          <Section style={{ padding: '8px 0 16px', textAlign: 'center' }}>
-            {brand.logoUrl ? (
-              <Img
-                src={brand.logoUrl}
-                alt={brand.name}
-                width="64"
-                height="64"
-                style={{ margin: '0 auto', borderRadius: '50%' }}
-              />
-            ) : (
-              <Text
-                style={{
-                  margin: 0,
-                  fontSize: '22px',
-                  fontWeight: 700,
-                  fontFamily: theme.fonts.heading,
-                }}
-              >
-                {brand.name}
-              </Text>
-            )}
-          </Section>
+          {hero ?? (
+            <Section style={{ padding: '8px 0 16px', textAlign: 'center' }}>
+              {brand.logoUrl ? (
+                <Img
+                  src={brand.logoUrl}
+                  alt={brand.name}
+                  width="64"
+                  height="64"
+                  style={{ margin: '0 auto', borderRadius: '50%' }}
+                />
+              ) : (
+                <Text
+                  style={{
+                    margin: 0,
+                    fontSize: '22px',
+                    fontWeight: 700,
+                    fontFamily: theme.fonts.heading,
+                  }}
+                >
+                  {brand.name}
+                </Text>
+              )}
+            </Section>
+          )}
           <Section
             style={{
               border: `1px solid ${theme.colors.border}`,

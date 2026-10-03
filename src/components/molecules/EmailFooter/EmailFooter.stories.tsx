@@ -26,6 +26,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
+export const WithSocial: Story = {
+  args: {
+    social: [
+      { network: 'pinterest', href: 'https://www.pinterest.com' },
+      { network: 'instagram', href: 'https://www.instagram.com' },
+      { network: 'linkedin', href: 'https://www.linkedin.com' },
+    ],
+  },
+};
+
 export const ReasonOnly: Story = {
   render: (args) => (
     <EmailFrame title="EmailFooter">

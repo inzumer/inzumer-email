@@ -16,12 +16,13 @@ export const EmailBanner = ({ src, alt, href }: EmailBannerProps) => {
     <Img
       src={src}
       alt={alt}
-      width="100%"
+      width="560"
       style={{
         display: 'block',
         width: '100%',
         height: 'auto',
         margin: '0 0 16px',
+        border: 0,
         borderRadius: theme.radius,
       }}
     />
