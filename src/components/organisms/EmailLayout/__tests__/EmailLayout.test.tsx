@@ -16,6 +16,28 @@ describe('EmailLayout', () => {
     expect(html).toContain('>Milimon<');
   });
 
+  it('should name the email and give it regions for screen readers', async () => {
+    const { html } = await renderEmail(
+      <EmailLayout
+        lang="es"
+        preview="Tu cuenta está lista"
+        title="¡Bienvenida a Milimon!"
+        brand={{ name: 'Milimon' }}
+        footer={<p>Pie</p>}
+      >
+        Hola
+      </EmailLayout>,
+    );
+
+    expect(html).toContain('<title>¡Bienvenida a Milimon!</title>');
+    expect(html).toContain('role="article"');
+    expect(html).toContain('aria-roledescription="email"');
+    expect(html).toContain('aria-label="¡Bienvenida a Milimon!"');
+    expect(html).toContain('role="banner"');
+    expect(html).toContain('role="main"');
+    expect(html).toContain('role="contentinfo"');
+  });
+
   it('should put the hero instead of the brand header', async () => {
     const { html } = await renderEmail(
       <EmailLayout lang="es" preview="Hola" brand={{ name: 'Milimon' }} hero={<p>Portada</p>}>

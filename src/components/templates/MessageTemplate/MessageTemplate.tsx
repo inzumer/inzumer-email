@@ -40,6 +40,7 @@ export const MessageTemplate = ({
   <EmailLayout
     lang={lang}
     preview={preview}
+    title={title}
     brand={brand}
     {...(theme && { theme })}
     footer={<EmailFooter {...footer} />}
