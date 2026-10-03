@@ -18,7 +18,7 @@ jobs:
   ci:
     uses: inzumer/inzumer-ci/.github/workflows/node-ci.yml@v1
     with:
-      audit-level: high
+      audit-level: low
       commands: |
         pnpm check
         pnpm test:coverage
