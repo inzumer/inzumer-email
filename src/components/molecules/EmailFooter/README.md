@@ -1,6 +1,6 @@
 # EmailFooter
 
-Small print under the card, set apart by a divider line: why they get the email, links and the unsubscribe.
+Under the card, set apart by a divider line: network icons, why they get the email, links and the unsubscribe.
 
 ## Usage
 
@@ -19,3 +19,4 @@ import { EmailFooter } from '@inzumer/email';
 - `reason` — why they get the email
 - `links` — links in a row, separated by " · "
 - `unsubscribe` — the unsubscribe link, required for newsletters
+- `social` — network icons (see `EmailSocialLinks`)

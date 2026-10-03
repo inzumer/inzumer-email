@@ -19,6 +19,17 @@ describe('EmailFooter', () => {
     expect(html).toContain('href="https://example.com/unsubscribe"');
   });
 
+  it('should show the network icons above the small print', async () => {
+    const { html } = await renderEmail(
+      <EmailFooter
+        reason="Te llega porque sí."
+        social={[{ network: 'instagram', href: 'https://ig.com/x' }]}
+      />,
+    );
+
+    expect(html.indexOf('alt="Instagram"')).toBeLessThan(html.indexOf('Te llega porque sí.'));
+  });
+
   it('should show only the reason without links', async () => {
     const { html } = await renderEmail(<EmailFooter reason="Tu cuenta fue eliminada." />);
 

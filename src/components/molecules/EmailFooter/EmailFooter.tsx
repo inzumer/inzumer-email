@@ -1,6 +1,7 @@
 import { useEmailTheme } from '@/theme';
 import { Link, Section, Text } from '@react-email/components';
 import type { ReactNode } from 'react';
+import { EmailSocialLinks, type EmailSocialLink } from '../EmailSocialLinks';
 
 export interface EmailFooterLink {
   href: string;
@@ -13,10 +14,12 @@ export interface EmailFooterProps {
   links?: EmailFooterLink[];
   /** Unsubscribe link, required for newsletters. */
   unsubscribe?: EmailFooterLink;
+  /** Network icons above the small print. */
+  social?: EmailSocialLink[];
 }
 
-/** Small print under the card, set apart by a divider: why this email, links and the unsubscribe. */
-export const EmailFooter = ({ reason, links = [], unsubscribe }: EmailFooterProps) => {
+/** Under the card, set apart by a divider: network icons, why this email, links and the unsubscribe. */
+export const EmailFooter = ({ reason, links = [], unsubscribe, social = [] }: EmailFooterProps) => {
   const theme = useEmailTheme();
   const small = {
     margin: '8px 0',
@@ -35,6 +38,7 @@ export const EmailFooter = ({ reason, links = [], unsubscribe }: EmailFooterProp
         textAlign: 'center',
       }}
     >
+      {social.length > 0 && <EmailSocialLinks links={social} />}
       <Text style={small}>{reason}</Text>
       {all.length > 0 && (
         <Text style={small}>
