@@ -77,7 +77,7 @@ src/theme/     createEmailTheme, defaultEmailTheme
 ## Storybook
 
 `pnpm storybook` shows every component and template rendered as sent, in Spanish and English. The
-Pages workflow publishes it on every push to `main`: <https://inzumer.github.io/inzumer-email/>.
+Pages workflow publishes it on every push to `main`: <https://ui-emails.inzumer.com>.
 Packages with their own emails show them the same way with `EmailPreview`.
 
 ## Development

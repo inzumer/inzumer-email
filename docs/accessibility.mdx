@@ -1,0 +1,16 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Accessibility" />
+
+# Accessibility
+
+- **A name and regions**: `EmailLayout` sets the `<title>` (the `title` prop, the subject; the
+  preview by default), wraps the email in `role="article"` with `aria-roledescription="email"` and
+  marks the header (`banner`), content (`main`) and footer (`contentinfo`), following the Email
+  Markup Consortium.
+- **One `h1` per email**: the hero or the first `EmailHeading`.
+- **Images**: every image has an `alt`; network icons use the network name, so the footer still
+  reads with images blocked.
+- **Contrast**: checked with axe in the Storybook a11y addon; dark `EmailSection` backgrounds take
+  light text colors.
+- **Language**: the `lang` of the email goes on `<html>` and on the article.

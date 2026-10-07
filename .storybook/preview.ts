@@ -10,7 +10,16 @@ const preview: Preview = {
       storySort: {
         order: [
           'Documentation',
-          ['Introduction', 'Usage'],
+          [
+            'Introduction',
+            'Installation',
+            'Usage',
+            'Tech Stack',
+            'Components',
+            'Theming',
+            'Accessibility',
+            'Testing And Coverage',
+          ],
           'Atoms',
           'Molecules',
           'Organisms',

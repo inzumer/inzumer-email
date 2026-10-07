@@ -1,0 +1,16 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Tech Stack" />
+
+# Tech Stack
+
+| Tool                                                                                  | Why                                                                          |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [React Email](https://react.email) (`@react-email/components`, `@react-email/render`) | Components that render the tables and inline styles email clients understand |
+| `@inzumer/tokens`                                                                     | The default theme comes from the Inzumer design tokens                       |
+| TypeScript (`@inzumer/tsconfig`)                                                      | Strict types for every component and template                                |
+| tsup                                                                                  | Builds the ESM bundle and its type declarations                              |
+| Vitest + Testing Library + jsdom                                                      | Unit tests and the rendered HTML of each component                           |
+| Storybook 10 (`@storybook/react-vite`)                                                | Every component and template rendered as sent, with docs and the a11y addon  |
+| ESLint (`@inzumer/eslint`) and Prettier (`@inzumer/prettier`)                         | Shared code style                                                            |
+| Changesets                                                                            | Versions and publishes to npm with trusted publishing                        |
