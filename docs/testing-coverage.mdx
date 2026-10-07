@@ -1,0 +1,26 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Testing And Coverage" />
+
+# Testing And Coverage
+
+## Stack
+
+Vitest, Testing Library and jsdom. Most tests render the component with `renderEmail` and check its
+HTML and plain text; `EmailPreview` and `EmailFrame` are tested in jsdom.
+
+## Running tests
+
+```sh
+pnpm test             # once
+pnpm test:coverage    # with the coverage report and gate
+```
+
+## The 90% coverage target
+
+`vitest.config.ts` fails under 90% of lines, branches, functions or statements. Stories and barrels
+are excluded. The CI reports the coverage on every PR.
+
+## Writing a new test
+
+Put it in `__tests__/<Name>.test.tsx` next to the component; every `it()` starts with "should".

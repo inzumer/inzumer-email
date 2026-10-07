@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Installation" />
+
+# Installation
+
+## Prerequisites
+
+- Node 24 (see `.nvmrc`) and pnpm 9 for working on this repo.
+- Projects that use the package can install it with npm, yarn or pnpm.
+
+## Working on this repo
+
+```sh
+pnpm install
+pnpm storybook        # http://localhost:6006
+pnpm test:coverage    # Vitest with the 90% gate
+pnpm check            # typecheck, lint, format and build
+```
+
+## Installing the package in another project
+
+```sh
+pnpm add @inzumer/email react react-dom
+```
+
+`react` and `react-dom` are peer dependencies (18 or 19), so the project keeps a single copy.
+
+## Minimum setup
+
+There's nothing to configure: import the components, compose the email and call `renderEmail`
+(see [Usage](/docs/documentation-usage--docs)). Images must use absolute URLs, because email clients
+can't resolve relative paths.

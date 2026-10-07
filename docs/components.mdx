@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Components" />
+
+# Components
+
+Atomic design, one folder per component (component, barrel, story, README and tests):
+
+| Level     | Components                                                     |
+| --------- | -------------------------------------------------------------- |
+| Atoms     | `EmailBanner`, `EmailButton`, `EmailHeading`, `EmailText`      |
+| Molecules | `EmailCard`, `EmailFooter`, `EmailSection`, `EmailSocialLinks` |
+| Organisms | `EmailHero`, `EmailLayout`                                     |
+| Templates | `MessageTemplate`, `ActionTemplate`                            |
+
+## Shared conventions
+
+- Every style is **inline** and uses concrete values from the theme (`useEmailTheme()`): email
+  clients don't read CSS variables, classes or modern layout.
+- Components never pick colors themselves: they read the theme set by `EmailLayout`, and
+  `EmailSection` can override the text colors for its own background.
+- Images take an absolute URL, explicit sizes and an `alt`.
+
+## Adding a new component
+
+1. Create `src/components/<level>/<Name>/` with `<Name>.tsx`, `index.ts`, `<Name>.stories.tsx`
+   (title `<Level>/<Name>`, `autodocs`, the README as description), `README.md` and
+   `__tests__/<Name>.test.tsx`.
+2. Export it from the level barrel (`atoms/index.ts`…).
+3. Show it in a story with `EmailFrame` (or `EmailPreview` for a full email), so it's seen as sent.
+4. Add a changeset (`pnpm changeset`).

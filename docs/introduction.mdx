@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Introduction" />
+
+# INZ.EMAILS · @inzumer/email
+
+Email components and templates built with [React Email](https://react.email) and themed with the
+Inzumer design tokens. They render HTML with tables and inline styles that Gmail, Outlook and Apple
+Mail understand, so every product of the ecosystem sends emails that look like its site.
+
+## What's inside
+
+| Level     | Components                                                     |
+| --------- | -------------------------------------------------------------- |
+| Atoms     | `EmailBanner`, `EmailButton`, `EmailHeading`, `EmailText`      |
+| Molecules | `EmailCard`, `EmailFooter`, `EmailSection`, `EmailSocialLinks` |
+| Organisms | `EmailHero`, `EmailLayout`                                     |
+| Templates | `MessageTemplate`, `ActionTemplate`                            |
+
+Every story renders the email **as sent** (its final HTML in a frame), in Spanish and English.
+
+## Principles
+
+- **White emails**: the page is always white; each brand brings its text, border, link and primary
+  colors, fonts and radius with `createEmailTheme`.
+- **Accessible**: a `<title>`, `role="article"` with `aria-roledescription="email"`, regions for
+  the header, content and footer, `alt` on every image and one `h1` per email.
+- **Images that load**: absolute URLs and explicit sizes; network icons are PNG because email
+  clients don't show SVG.
+
+## Links
+
+- Package: [npm](https://www.npmjs.com/package/@inzumer/email) ·
+  [GitHub](https://github.com/inzumer/inzumer-email)
+- Ecosystem docs: [ui-docs.inzumer.com](https://ui-docs.inzumer.com/paquetes/email/)
+- Web components: [ui-web.inzumer.com](https://ui-web.inzumer.com)
