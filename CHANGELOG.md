@@ -1,5 +1,11 @@
 # @inzumer/email
 
+## 0.3.1
+
+### Patch Changes
+
+- 6a41008: The default network icons are served from https://ui-emails.inzumer.com/social (the Storybook's own domain).
+
 ## 0.3.0
 
 ### Minor Changes
