@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Usage" />
+
+# Usage
+
+```sh
+pnpm add @inzumer/email react react-dom
+```
+
+## Render an email
+
+```tsx
+import { createEmailTheme, MessageTemplate, renderEmail } from '@inzumer/email';
+
+const theme = createEmailTheme({ colors: { primary: '#f29a3e' }, radius: '12px' });
+
+const { html, text } = await renderEmail(
+  <MessageTemplate
+    lang="en"
+    preview="Your account is ready"
+    title="Hi, Ana!"
+    brand={{ name: 'Milimon', logoUrl: 'https://example.com/logo.png' }}
+    theme={theme}
+    paragraphs={['Your account is ready.']}
+    action={{ href: 'https://example.com', label: 'Get started' }}
+    footer={{ reason: 'You get this because you created an account.' }}
+  />,
+);
+```
+
+`renderEmail` returns the HTML (inline styles) and its plain-text version: send both.
+
+## Build your own
+
+Compose `EmailLayout` (with an optional `EmailHero`) and the atoms and molecules; pass the
+`title` (the subject) so screen readers and the web view name the email. A product package (like
+`@inzumer/milimon-emails`) keeps its emails as pages in `src/components/pages`.
+
+## Preview
+
+`pnpm storybook` shows every component and template as sent. `EmailPreview` renders any email in
+a frame, for your own Storybook.
