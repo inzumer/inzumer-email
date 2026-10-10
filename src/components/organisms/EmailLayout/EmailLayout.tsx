@@ -1,4 +1,10 @@
-import { defaultEmailTheme, EMAIL_BACKGROUND, EmailThemeContext, type EmailTheme } from '@/theme';
+import {
+  defaultEmailTheme,
+  EMAIL_BACKGROUND,
+  EmailThemeContext,
+  textStyle,
+  type EmailTheme,
+} from '@/theme';
 import { Body, Container, Head, Html, Img, Preview, Section, Text } from '@react-email/components';
 import type { ReactNode } from 'react';
 
@@ -65,8 +71,8 @@ export const EmailLayout = ({
                         style={{
                           margin: 0,
                           fontSize: '22px',
-                          fontWeight: 700,
                           fontFamily: theme.fonts.heading,
+                          ...textStyle(theme.brand),
                         }}
                       >
                         {brand.name}
