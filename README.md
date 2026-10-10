@@ -30,7 +30,7 @@ const { html, text } = await renderEmail(
   <EmailLayout
     lang="es"
     preview="Tu cuenta está lista"
-    brand={{ name: 'Milimon', logoUrl: 'https://example.com/logo.png' }}
+    brand={{ name: 'Inzumer', logoUrl: 'https://example.com/logo.png' }}
     theme={theme}
     footer={<EmailFooter reason="Te llega porque creaste una cuenta." />}
   >
@@ -50,7 +50,8 @@ const { html, text } = await renderEmail(
 | `EmailBanner`                           | Full-width image, optionally linked                                                           |
 | `EmailCard`                             | Highlighted block: themed border and soft shadow, no fill                                     |
 | `EmailFooter`                           | Set apart by a divider: why they get the email, links and the unsubscribe                     |
-| `createEmailTheme`, `defaultEmailTheme` | Text, border, link and primary colors, fonts and radius (from `@inzumer/tokens`)              |
+| `createEmailTheme`, `defaultEmailTheme` | Colors, fonts, radii, title styles and card shadow (from `@inzumer/tokens`)                   |
+| `inzumerEmailTheme`                     | Inzumer's look: black and white, thin uppercase titles, pill buttons, border-only cards       |
 | `renderEmail`                           | HTML (inline styles) and its plain-text version                                               |
 | `MessageTemplate`                       | Ready-made message: title, paragraphs, highlight, action, note, signature                     |
 | `ActionTemplate`                        | One action by link (confirm, reset): button, copyable link and expiry                         |
@@ -71,7 +72,7 @@ src/components/
   templates/   ActionTemplate, MessageTemplate
 src/preview/   EmailPreview (exported), EmailFrame (stories only)
 src/render/    renderEmail
-src/theme/     createEmailTheme, defaultEmailTheme
+src/theme/     createEmailTheme, defaultEmailTheme, inzumerEmailTheme
 ```
 
 ## Storybook

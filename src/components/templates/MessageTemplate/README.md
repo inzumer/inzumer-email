@@ -10,7 +10,7 @@ import { MessageTemplate } from '@inzumer/email';
 <MessageTemplate
   lang="en"
   preview="Your account is ready"
-  brand={{ name: 'Milimon' }}
+  brand={{ name: 'Inzumer' }}
   title="Hi, Ana!"
   paragraphs={['Your account is ready.']}
   highlight={{ title: 'What is saved', items: ['Your calculations'] }}

@@ -13,6 +13,9 @@ const theme = createEmailTheme({
   colors: { text: '#2F201B', primary: '#F29A3E', primaryText: '#2F201B', border: '#EADFD6' },
   fonts: { heading: 'Georgia, serif' },
   radius: '12px',
+  buttonRadius: '999px',
+  headings: { weight: 400, uppercase: true, letterSpacing: '1px' },
+  cardShadow: 'none',
 });
 
 <EmailLayout lang="en" preview="Hi" brand={{ name: 'Brand' }} theme={theme}>
@@ -20,14 +23,37 @@ const theme = createEmailTheme({
 </EmailLayout>;
 ```
 
-| Key                              | What it colors                                       |
-| -------------------------------- | ---------------------------------------------------- |
-| `colors.text` / `textSecondary`  | Body text and secondary lines                        |
-| `colors.border`                  | The content card, `EmailCard` and the footer divider |
-| `colors.link`                    | Links                                                |
-| `colors.primary` / `primaryText` | Buttons and the default hero                         |
-| `fonts.body` / `heading`         | Text and titles                                      |
-| `radius`                         | Cards, buttons, banners and the hero                 |
+| Key                              | What it styles                                                          |
+| -------------------------------- | ----------------------------------------------------------------------- |
+| `colors.text` / `textSecondary`  | Body text and secondary lines                                           |
+| `colors.border`                  | The content card, `EmailCard` and the footer divider                    |
+| `colors.link`                    | Links                                                                   |
+| `colors.primary` / `primaryText` | Buttons and the default hero                                            |
+| `fonts.body` / `heading`         | Text and titles                                                         |
+| `radius`                         | Cards, banners, the hero and the content card                           |
+| `buttonRadius`                   | Buttons; the same as `radius` unless set (`999px` for pills)            |
+| `headings`                       | Titles: `weight`, `letterSpacing` and `uppercase`                       |
+| `brand`                          | The brand name in the header (when there is no logo), same three fields |
+| `cardShadow`                     | `EmailCard`'s shadow; `none` leaves only the border                     |
 
 Anything not given keeps the default theme, which comes from `@inzumer/tokens`. For a block with its
 own background in a long email, use `EmailSection`.
+
+## The Inzumer preset
+
+`inzumerEmailTheme` is Inzumer's own look: black and white, thin uppercase titles, the bold wordmark,
+pill buttons and cards that are only a border. Its header image lives at
+`https://ui-emails.inzumer.com/brand/inzumer-header.png`, for an `EmailBanner` in the `hero` slot:
+
+```tsx
+import { EmailBanner, inzumerEmailTheme, MessageTemplate } from '@inzumer/email';
+
+<MessageTemplate
+  theme={inzumerEmailTheme}
+  hero={<EmailBanner src="https://ui-emails.inzumer.com/brand/inzumer-header.png" alt="INZUMER" />}
+  …
+/>;
+```
+
+Inter shows in Apple Mail and other clients that have it; the rest fall back to Helvetica or Arial,
+with the same weights.

@@ -20,7 +20,7 @@ const { html, text } = await renderEmail(
     lang="en"
     preview="Your account is ready"
     title="Hi, Ana!"
-    brand={{ name: 'Milimon', logoUrl: 'https://example.com/logo.png' }}
+    brand={{ name: 'Inzumer', logoUrl: 'https://example.com/logo.png' }}
     theme={theme}
     paragraphs={['Your account is ready.']}
     action={{ href: 'https://example.com', label: 'Get started' }}
@@ -34,8 +34,8 @@ const { html, text } = await renderEmail(
 ## Build your own
 
 Compose `EmailLayout` (with an optional `EmailHero`) and the atoms and molecules; pass the
-`title` (the subject) so screen readers and the web view name the email. A product package (like
-`@inzumer/milimon-emails`) keeps its emails as pages in `src/components/pages`.
+`title` (the subject) so screen readers and the web view name the email. A product package keeps its
+emails as pages in `src/components/pages`.
 
 ## Preview
 
