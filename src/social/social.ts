@@ -3,6 +3,7 @@ export const SOCIAL_ICONS_URL = 'https://ui-emails.inzumer.com/social';
 
 export const SOCIAL_NETWORKS = {
   facebook: 'Facebook',
+  github: 'GitHub',
   instagram: 'Instagram',
   linkedin: 'LinkedIn',
   pinterest: 'Pinterest',

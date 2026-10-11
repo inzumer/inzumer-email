@@ -8,7 +8,7 @@ describe('EmailSocialLinks', () => {
     const { html } = await renderEmail(
       <EmailSocialLinks
         links={[
-          { network: 'pinterest', href: 'https://www.pinterest.com/milimon' },
+          { network: 'pinterest', href: 'https://www.pinterest.com/inzumer' },
           {
             network: 'linkedin',
             href: 'https://www.linkedin.com/in/x',
@@ -18,7 +18,7 @@ describe('EmailSocialLinks', () => {
       />,
     );
 
-    expect(html).toContain('href="https://www.pinterest.com/milimon"');
+    expect(html).toContain('href="https://www.pinterest.com/inzumer"');
     expect(html).toContain(`src="${SOCIAL_ICONS_URL}/pinterest.png"`);
     expect(html).toContain('alt="Pinterest"');
     expect(html).toContain('src="https://a.com/in.png"');

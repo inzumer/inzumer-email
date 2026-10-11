@@ -1,4 +1,4 @@
-import { useEmailTheme } from '@/theme';
+import { textStyle, useEmailTheme } from '@/theme';
 import { Heading, Img, Section, Text } from '@react-email/components';
 
 export interface EmailHeroProps {
@@ -61,6 +61,7 @@ export const EmailHero = ({
           fontSize: '30px',
           lineHeight: 1.2,
           color,
+          ...textStyle(theme.headings),
         }}
       >
         {title}

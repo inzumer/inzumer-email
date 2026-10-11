@@ -10,7 +10,7 @@ import { ActionTemplate } from '@inzumer/email';
 <ActionTemplate
   lang="en"
   preview="Confirm your email"
-  brand={{ name: 'Milimon' }}
+  brand={{ name: 'Inzumer' }}
   title="Confirm your email"
   paragraphs={['Tap the button to confirm it is yours.']}
   action={{ href: 'https://example.com/confirm?token=…', label: 'Confirm email' }}

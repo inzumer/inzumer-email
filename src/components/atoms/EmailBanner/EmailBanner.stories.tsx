@@ -9,8 +9,8 @@ const meta = {
   tags: ['autodocs'],
   parameters: { docs: { description: { component: readme.replace(/^#[^\n]*\n+/, '') } } },
   args: {
-    src: 'https://milimon.inzumer.workers.dev/og/og-home-es.png',
-    alt: 'Portada de Milimon',
+    src: 'https://ui-emails.inzumer.com/brand/inzumer-header.png',
+    alt: 'INZUMER, Senior Frontend Engineer',
   },
   render: (args) => (
     <EmailFrame title="EmailBanner">
@@ -25,4 +25,4 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const Linked: Story = { args: { href: 'https://milimon.inzumer.workers.dev' } };
+export const Linked: Story = { args: { href: 'https://www.inzumer.com' } };

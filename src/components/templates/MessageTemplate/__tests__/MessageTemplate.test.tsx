@@ -37,4 +37,30 @@ describe('MessageTemplate', () => {
     expect(text).toContain('Solo texto.');
     expect(text).not.toContain('•');
   });
+
+  it('should take a hero, a banner and network icons in the footer', async () => {
+    const { html } = await renderEmail(
+      <MessageTemplate
+        {...common}
+        hero={<p>Portada</p>}
+        title="Hola"
+        paragraphs={['Texto.']}
+        banner={{
+          src: 'https://example.com/cover.png',
+          alt: 'Portada del proyecto',
+          href: 'https://example.com',
+        }}
+        footer={{
+          reason: 'Te llega porque sí.',
+          social: [{ network: 'github', href: 'https://github.com/inzumer' }],
+        }}
+      />,
+    );
+
+    expect(html).toContain('Portada');
+    expect(html).not.toContain('>Inzumer<');
+    expect(html).toContain('alt="Portada del proyecto"');
+    expect(html).toContain('href="https://github.com/inzumer"');
+    expect(html).toContain('github.png');
+  });
 });

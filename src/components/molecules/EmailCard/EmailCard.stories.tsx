@@ -12,9 +12,9 @@ const meta = {
   args: {
     children: (
       <>
-        <EmailHeading level={2}>Qué se guarda</EmailHeading>
-        <EmailText>• Tus cálculos</EmailText>
-        <EmailText>• Tus recetas favoritas</EmailText>
+        <EmailHeading level={2}>Qué incluye</EmailHeading>
+        <EmailText>• Componentes y tokens</EmailText>
+        <EmailText>• Plantillas de mails</EmailText>
       </>
     ),
   },

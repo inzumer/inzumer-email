@@ -1,4 +1,4 @@
-import { useEmailTheme } from '@/theme';
+import { textStyle, useEmailTheme } from '@/theme';
 import { Heading } from '@react-email/components';
 import type { ReactNode } from 'react';
 
@@ -20,6 +20,7 @@ export const EmailHeading = ({ level = 1, children }: EmailHeadingProps) => {
         fontSize: level === 1 ? '26px' : '20px',
         lineHeight: 1.25,
         color: theme.colors.text,
+        ...textStyle(theme.headings),
       }}
     >
       {children}

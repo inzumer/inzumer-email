@@ -6,7 +6,7 @@ export interface EmailCardProps {
   children: ReactNode;
 }
 
-/** A highlighted block inside the email (a summary, a list of links): border and soft shadow, no fill. */
+/** A highlighted block inside the email (a summary, a list of links): border and the theme shadow, no fill. */
 export const EmailCard = ({ children }: EmailCardProps) => {
   const theme = useEmailTheme();
 
@@ -18,7 +18,7 @@ export const EmailCard = ({ children }: EmailCardProps) => {
         borderRadius: theme.radius,
         border: `1px solid ${theme.colors.border}`,
         // Gmail and Outlook drop the shadow; the border alone still frames the block.
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
+        ...(theme.cardShadow !== 'none' && { boxShadow: theme.cardShadow }),
       }}
     >
       {children}

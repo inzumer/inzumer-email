@@ -10,7 +10,7 @@ import { createEmailTheme, EmailFooter, EmailLayout, EmailText } from '@inzumer/
 <EmailLayout
   lang="en"
   preview="Your account is ready"
-  brand={{ name: 'Milimon', logoUrl: 'https://example.com/logo.png' }}
+  brand={{ name: 'Inzumer', logoUrl: 'https://example.com/logo.png' }}
   theme={createEmailTheme({ colors: { primary: '#f29a3e' } })}
   footer={<EmailFooter reason="You created an account." />}
 >

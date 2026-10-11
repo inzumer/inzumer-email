@@ -1,16 +1,10 @@
 import { EmailText } from '@/components/atoms';
 import { EmailLayout } from '@/components/organisms/EmailLayout';
 import { EmailPreview } from '@/preview';
-import { createEmailTheme } from '@/theme';
+import { inzumerEmailTheme } from '@/theme';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { EmailHero } from './EmailHero';
 import readme from './README.md?raw';
-
-const milimon = createEmailTheme({
-  colors: { text: '#2F201B', primary: '#F29A3E', primaryText: '#2F201B', border: '#EADFD6' },
-  fonts: { heading: 'Georgia, "Times New Roman", serif' },
-  radius: '12px',
-});
 
 const meta = {
   title: 'Organisms/EmailHero',
@@ -18,9 +12,9 @@ const meta = {
   tags: ['autodocs'],
   parameters: { docs: { description: { component: readme.replace(/^#[^\n]*\n+/, '') } } },
   args: {
-    logo: { src: 'https://milimon.inzumer.workers.dev/android-chrome-192x192.png', alt: 'Milimon' },
-    title: 'Nueva receta: budín de limón',
-    subtitle: 'Húmedo, cítrico y con su costo calculado.',
+    logo: { src: 'https://ui-emails.inzumer.com/apple-touch-icon.png', alt: 'Inzumer' },
+    title: 'Nuevo proyecto publicado',
+    subtitle: 'Un checkout que combina medios de pago, contado paso a paso.',
   },
   render: (args) => (
     <EmailPreview
@@ -29,8 +23,8 @@ const meta = {
         <EmailLayout
           lang="es"
           preview={args.title}
-          brand={{ name: 'Milimon' }}
-          theme={milimon}
+          brand={{ name: 'Inzumer' }}
+          theme={inzumerEmailTheme}
           hero={<EmailHero {...args} />}
         >
           <EmailText>El contenido del mail sigue debajo.</EmailText>

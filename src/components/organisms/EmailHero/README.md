@@ -14,10 +14,10 @@ import { EmailHero, EmailLayout } from '@inzumer/email';
 
 <EmailLayout
   lang="en"
-  preview="New recipe"
-  brand={{ name: 'Milimon' }}
+  preview="New project"
+  brand={{ name: 'Inzumer' }}
   hero={
-    <EmailHero logo={{ src: 'https://example.com/logo.png', alt: 'Milimon' }} title="New recipe" />
+    <EmailHero logo={{ src: 'https://example.com/logo.png', alt: 'Inzumer' }} title="New project" />
   }
 >
   …
