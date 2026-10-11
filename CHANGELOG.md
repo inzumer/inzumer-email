@@ -1,5 +1,15 @@
 # @inzumer/email
 
+## 0.4.0
+
+### Minor Changes
+
+- 201ab13: Richer themes: `buttonRadius` (pill buttons with rounded cards), `headings` and `brand` title styles (weight, letter spacing, uppercase) and `cardShadow` (`none` for border-only cards). New `inzumerEmailTheme` preset and Inzumer header image, `MessageTemplate` takes a `hero`, a `banner` and network icons in its footer, and there is a `github` network icon. Examples no longer use Milimon.
+
+### Patch Changes
+
+- 6a41008: The default network icons are served from https://ui-emails.inzumer.com/social (the Storybook's own domain).
+
 ## 0.3.0
 
 ### Minor Changes
