@@ -100,7 +100,7 @@ export const Inzumer: Story = {
           action={{ href: 'https://www.inzumer.com/es', label: 'Visitar inzumer.com' }}
           signature="Nahuel Zamuner — Senior Frontend Engineer"
           footer={{
-            reason: 'Recibís este correo porque escribiste desde el formulario de inzumer.com.',
+            reason: 'Recibes este correo porque escribiste desde el formulario de inzumer.com.',
             social: [
               { network: 'linkedin', href: 'https://www.linkedin.com/in/inzumer' },
               { network: 'github', href: 'https://github.com/inzumer' },
