@@ -35,7 +35,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {};
 
-/** A dark background with light texts. */
 export const Dark: Story = {
   args: { colors: { background: '#2F201B', text: '#FDF7F1', textSecondary: '#EADFD6' } },
 };

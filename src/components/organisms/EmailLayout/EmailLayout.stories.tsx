@@ -32,7 +32,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-/** A brand theme (colors, fonts and radius) applies to everything inside. */
 export const Themed: Story = {
   args: {
     theme: createEmailTheme({

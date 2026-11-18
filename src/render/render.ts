@@ -3,7 +3,6 @@ import type { ReactElement } from 'react';
 
 export interface RenderedEmail {
   html: string;
-  /** Plain-text version for clients without HTML (and spam filters). */
   text: string;
 }
 

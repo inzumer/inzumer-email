@@ -3,7 +3,6 @@ import { useEffect, useState, type ReactElement } from 'react';
 
 export interface EmailPreviewProps {
   email: ReactElement;
-  /** Accessible name of the frame. */
   title: string;
 }
 

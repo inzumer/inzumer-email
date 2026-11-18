@@ -3,7 +3,6 @@ import { Text } from '@react-email/components';
 import type { ReactNode } from 'react';
 
 export interface EmailTextProps {
-  /** `body` (default), `secondary` for less important lines, `small` for notes. */
   variant?: 'body' | 'secondary' | 'small';
   children: ReactNode;
 }

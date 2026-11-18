@@ -4,15 +4,10 @@ import { Heading, Img, Section, Text } from '@react-email/components';
 export interface EmailHeroProps {
   title: string;
   subtitle?: string;
-  /** Logo on top (absolute URL), in the same block as the title. */
   logo?: { src: string; alt: string };
-  /** Solid background; also the fallback behind `image` (Outlook doesn't show background images). */
   background?: string;
-  /** A full background image with the texts over it. */
   image?: string;
-  /** Color of the title and subtitle; the primary text color by default. */
   textColor?: string;
-  /** How much the image is darkened so the texts read (0 to 1, 0.45 by default). */
   overlay?: number;
 }
 

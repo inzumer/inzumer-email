@@ -9,15 +9,11 @@ import { Body, Container, Head, Html, Img, Preview, Section, Text } from '@react
 import type { ReactNode } from 'react';
 
 export interface EmailLayoutProps {
-  /** `lang` of the email (e.g. `es`, `en`). */
   lang: string;
-  /** Text shown by the inbox next to the subject. */
   preview: string;
-  /** Name of the email for screen readers and the web view (usually the subject); `preview` otherwise. */
   title?: string;
   brand: { name: string; logoUrl?: string };
   theme?: EmailTheme;
-  /** An `EmailHero` on top; it replaces the simple brand header. */
   hero?: ReactNode;
   footer?: ReactNode;
   children: ReactNode;
@@ -52,7 +48,6 @@ export const EmailLayout = ({
             color: theme.colors.text,
           }}
         >
-          {/* Email Markup Consortium: name the email and give it regions (header, content, footer). */}
           <div role="article" aria-roledescription="email" aria-label={name} lang={lang}>
             <Container style={{ maxWidth: '560px', margin: '0 auto' }}>
               <div role="banner">
