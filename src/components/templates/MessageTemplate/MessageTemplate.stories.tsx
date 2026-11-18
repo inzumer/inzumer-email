@@ -53,7 +53,6 @@ export const WelcomeEn: Story = {
   },
 };
 
-/** Without highlight or action: a plain notice. */
 export const Notice: Story = {
   render: (args) => (
     <EmailPreview
@@ -75,7 +74,6 @@ export const Notice: Story = {
   ),
 };
 
-/** The Inzumer preset: black and white, a header image, thin titles, pill button and network icons. */
 export const Inzumer: Story = {
   render: () => (
     <EmailPreview

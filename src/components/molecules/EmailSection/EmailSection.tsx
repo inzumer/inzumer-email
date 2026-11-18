@@ -4,7 +4,6 @@ import type { ReactNode } from 'react';
 
 export interface EmailSectionColors {
   background: string;
-  /** Text on that background; the theme's otherwise. */
   text?: string;
   textSecondary?: string;
 }

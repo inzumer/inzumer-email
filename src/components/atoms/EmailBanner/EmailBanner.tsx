@@ -2,10 +2,8 @@ import { useEmailTheme } from '@/theme';
 import { Img, Link } from '@react-email/components';
 
 export interface EmailBannerProps {
-  /** Absolute URL: email clients can't load relative paths. */
   src: string;
   alt: string;
-  /** Makes the whole banner a link. */
   href?: string;
 }
 

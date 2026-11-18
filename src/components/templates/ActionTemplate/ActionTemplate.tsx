@@ -6,9 +6,7 @@ export type ActionTemplateProps = Omit<
   'action' | 'highlight' | 'note' | 'children'
 > & {
   action: { href: string; label: string };
-  /** e.g. "If the button doesn't work, paste this link in your browser:" */
   fallback: string;
-  /** e.g. "The link expires in 30 minutes." */
   expires?: string;
 };
 

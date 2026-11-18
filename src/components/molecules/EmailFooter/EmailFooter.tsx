@@ -9,12 +9,9 @@ export interface EmailFooterLink {
 }
 
 export interface EmailFooterProps {
-  /** Why they get the email (e.g. "You get this email because you have an account"). */
   reason: ReactNode;
   links?: EmailFooterLink[];
-  /** Unsubscribe link, required for newsletters. */
   unsubscribe?: EmailFooterLink;
-  /** Network icons above the small print. */
   social?: EmailSocialLink[];
 }
 

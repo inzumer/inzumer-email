@@ -5,7 +5,6 @@ const preview: Preview = {
   parameters: {
     docs: { theme },
     layout: 'fullscreen',
-    // Documentation first: it's what opens at the root of the published Storybook.
     options: {
       storySort: {
         order: [

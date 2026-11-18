@@ -15,18 +15,13 @@ export interface MessageTemplateProps {
   preview: string;
   brand: { name: string; logoUrl?: string };
   theme?: EmailTheme;
-  /** An `EmailHero` on top, in place of the brand header. */
   hero?: ReactNode;
   title: string;
   paragraphs: string[];
-  /** Highlighted block: a title and its bullet points. */
   highlight?: { title: string; items: string[] };
-  /** A full-width image after the text (a cover, a project), optionally linked. */
   banner?: EmailBannerProps;
   action?: { href: string; label: string };
-  /** Extra content right after the action. */
   children?: ReactNode;
-  /** Secondary line after the action. */
   note?: string;
   signature?: string;
   footer: EmailFooterProps;

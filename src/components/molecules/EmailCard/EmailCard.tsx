@@ -17,7 +17,6 @@ export const EmailCard = ({ children }: EmailCardProps) => {
         padding: '16px 18px',
         borderRadius: theme.radius,
         border: `1px solid ${theme.colors.border}`,
-        // Gmail and Outlook drop the shadow; the border alone still frames the block.
         ...(theme.cardShadow !== 'none' && { boxShadow: theme.cardShadow }),
       }}
     >

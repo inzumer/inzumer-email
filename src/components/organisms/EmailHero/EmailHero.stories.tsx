@@ -38,10 +38,8 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-/** Logo, title and subtitle in one block with the brand color. */
 export const SolidColor: Story = {};
 
-/** A full image with the texts over it; the dark color shows where images don't. */
 export const OverImage: Story = {
   args: {
     image: 'https://picsum.photos/id/1080/1200/600',

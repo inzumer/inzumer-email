@@ -1,16 +1,13 @@
 import { baseColors, baseTypography } from '@inzumer/tokens';
 
-/** Email background: always white (no per-theme background). */
 export const EMAIL_BACKGROUND = '#ffffff';
 
-/** How a kind of title looks: weight, spacing and case. */
 export interface EmailTextStyle {
   weight: number;
   letterSpacing: string;
   uppercase: boolean;
 }
 
-/** Concrete values for email clients, which don't read CSS variables. */
 export interface EmailTheme {
   colors: {
     text: string;
@@ -24,15 +21,10 @@ export interface EmailTheme {
     body: string;
     heading: string;
   };
-  /** Cards, banners, the hero and the content card. */
   radius: string;
-  /** Buttons; the same as `radius` unless set. */
   buttonRadius: string;
-  /** Titles (`EmailHeading`, the hero). */
   headings: EmailTextStyle;
-  /** The brand name in the header when there is no logo. */
   brand: EmailTextStyle;
-  /** Shadow of `EmailCard`; `none` for a border only. */
   cardShadow: string;
 }
 
@@ -92,10 +84,6 @@ export const textStyle = ({ weight, letterSpacing, uppercase }: EmailTextStyle) 
 
 const INTER = "Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 
-/**
- * Inzumer: black and white, thin uppercase titles, the bold wordmark, pill buttons and cards that
- * are only a border. Clients without Inter fall back to Helvetica or Arial.
- */
 export const inzumerEmailTheme = createEmailTheme({
   colors: {
     text: '#151515',

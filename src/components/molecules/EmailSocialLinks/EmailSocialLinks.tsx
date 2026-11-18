@@ -5,7 +5,6 @@ import { Img, Link, Text } from '@react-email/components';
 export interface EmailSocialLink {
   network: SocialNetwork;
   href: string;
-  /** A brand's own PNG; the default gray icon otherwise. */
   iconUrl?: string;
 }
 
