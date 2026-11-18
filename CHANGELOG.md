@@ -1,5 +1,11 @@
 # @inzumer/email
 
+## 0.4.1
+
+### Patch Changes
+
+- f57862f: Remove code comments; JSDoc stays only on functions, so types and props no longer carry doc comments.
+
 ## 0.4.0
 
 ### Minor Changes
